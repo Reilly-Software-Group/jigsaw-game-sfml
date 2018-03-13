@@ -1,13 +1,10 @@
-#include "../inc/common.hpp"
+#include "../inc/jigsaw.h"
 
-JigsawPiece::Jigsaw()
+JigsawPiece::JigsawPiece()
 {
     
+    jigsawSize = (sf::Vector2f(0, 0));
+    texViewPort = (sf::Vector2f(0, 0));
+    position = (sf::Vector2f(0, 0));
     
-    
-}
-
-void JigsawPiece::jigsawToVector()
-{
-    int 
 }

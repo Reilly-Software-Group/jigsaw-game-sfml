@@ -1,4 +1,4 @@
-#include "../inc/menu.hpp"
+#include "../inc/menu.h"
 
 Menu::Menu()
 {
@@ -13,7 +13,7 @@ Menu::Menu()
     textColor = sf::Color::Black;
     backgroundColor = sf::Color::White;
     
-    buttonColor1.r = 200;#include "../inc/lvl1.h"
+    buttonColor1.r = 200;
     buttonColor1.g = 202;
     buttonColor1.b = 206;
     
@@ -66,7 +66,7 @@ Menu::Menu()
     
 }
 
-int stringToInt(str::string word)
+int Menu::stringToInt(std::string word)
 {
     int n = 0, c = 0;
     
@@ -82,23 +82,18 @@ int stringToInt(str::string word)
     {
         n = std::stoi(word);
         
-        return intGameSizeChoice;
+        return n;
     }
     
-    std::cout << "ERROR: Size of word is not equal to the amount of numbers it contains"
+    std::cout << std::endl << "ERROR: Size of word is not equal to the amount of numbers it contains" << std::endl;
     
     return 0;
 }
 
-void gameSizeIntToString()
+int Menu::getIntGameSizeChoice()
 {
     
     intGameSizeChoice = stringToInt(gameSizeChoice);
-    
-}
-
-int getIntGameSizeChoice()
-{
     
     return intGameSizeChoice;
     

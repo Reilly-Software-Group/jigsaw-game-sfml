@@ -1,7 +1,7 @@
-#ifndef MENU_HPP
-#define MENU_HPP
+#ifndef MENU_H
+#define MENU_H
 
-#include "common.hpp"
+#include "common.h"
 
 class Menu
 {
@@ -64,12 +64,11 @@ private:
     std::string menuHintText;
     std::string menuExitButtonWordText;
     
-    int stringToInt(str::string word);
+    int stringToInt(std::string word);
     
 public:
     
     Menu();
-    void gameSizeIntToString();
     int getIntGameSizeChoice();
     
 };
