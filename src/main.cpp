@@ -9,7 +9,29 @@ std::vector <JigsawPiece> gameSet;
 
 int main()
 {
-    std::cout << "Hello world! Desktop test 1";
+    std::string input = "50";
+    int intInput = 0, c = 0;
+    bool isGoodInput = 0;
+    
+    while (isGoodInput == 0)
+    {
+        
+        std::cout << std::endl << "choose a game option: ";
+        std::cin >> input;
+        std::cout << std::endl;
+        
+        intInput = menu.stringToInt(input);
+        
+        if (intInput != 0 && intInput <= 50)
+        {
+            std::cout << std::endl << intInput;
+            
+            break;
+        }
+        
+    }
+    
+    std::cout << gameSet.size();
     
     return 0;
 }

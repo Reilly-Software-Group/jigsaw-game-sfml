@@ -64,13 +64,12 @@ private:
     std::string menuHintText;
     std::string menuExitButtonWordText;
     
-    int stringToInt(std::string word);
-    
 public:
     
     Menu();
-    int getIntGameSizeChoice();
     
+    int getIntGameSizeChoice();
+    int stringToInt(std::string word);
 };
 
 #endif
