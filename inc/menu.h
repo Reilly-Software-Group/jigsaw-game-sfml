@@ -68,6 +68,8 @@ public:
     
     Menu();
     
+    std::string setGameSizeChoice(std::string word);
+    
     int getIntGameSizeChoice();
     int stringToInt(std::string word);
 };

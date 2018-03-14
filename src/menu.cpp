@@ -62,7 +62,14 @@ Menu::Menu()
     
     menuWindowSize = (sf::Vector2f(0, 0));
     
-    intGameSizeChoice = stringToInt(gameSizeChoice);
+    intGameSizeChoice = 0;
+    
+}
+
+std::string Menu::setGameSizeChoice(std::string word)
+{
+    
+    gameSizeChoice = word;
     
 }
 
@@ -92,6 +99,7 @@ int Menu::stringToInt(std::string word)
 
 int Menu::getIntGameSizeChoice()
 {
+    intGameSizeChoice = stringToInt(gameSizeChoice);
     
     return intGameSizeChoice;
     

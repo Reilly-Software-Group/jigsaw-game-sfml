@@ -5,11 +5,13 @@
 Menu menu;
 JigsawPiece jigsaw;
 
+void setUpJigsawVector();
+
 std::vector <JigsawPiece> gameSet;
 
 int main()
 {
-    std::string input = "50";
+    std::string input;
     int intInput = 0, c = 0;
     bool isGoodInput = 0;
     
@@ -20,18 +22,22 @@ int main()
         std::cin >> input;
         std::cout << std::endl;
         
+        menu.setGameSizeChoice(input);
+        
         intInput = menu.stringToInt(input);
         
         if (intInput != 0 && intInput <= 50)
         {
-            std::cout << std::endl << intInput;
+            std::cout << std::endl << intInput << std::endl ;
             
             break;
         }
         
     }
     
-    std::cout << gameSet.size();
+    setUpJigsawVector();
+    
+    std::cout << std::endl << gameSet.size() << std::endl;
     
     return 0;
 }
