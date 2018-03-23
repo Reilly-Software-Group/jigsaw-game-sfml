@@ -104,3 +104,45 @@ int Menu::getIntGameSizeChoice()
     return intGameSizeChoice;
     
 }
+
+void Menu::menuLoop()
+{
+    
+    menuWindow.create(sf::VideoMode(500, 500), "Smart Tab", sf::Style::Titlebar | sf::Style::Close);
+    
+    sf::RectangleShape rect1;
+    rect1.setSize(sf::Vector2f(75, 75));
+    rect1.setFillColor(sf::Color::Black);
+    
+    sf::FloatRect boundingBox;
+    
+    sf::Vector2f mousePos;
+    
+    while (menuWindow.isOpen())
+    {
+        sf::Event event;
+        
+        while (menuWindow.pollEvent(event))
+        {
+            mousePos.x = sf::Mouse::getPosition(menuWindow).x;
+            mousePos.y = sf::Mouse::getPosition(menuWindow).y;
+            
+            boundingBox = rect1.getGlobalBounds();
+            
+            if (event.type == sf::Event::Closed)
+                menuWindow.close();
+            
+            if (boundingBox.contains(mousePos) &&  sf::Mouse::isButtonPressed(sf::Mouse::Left))
+            {
+                rect1.setPosition(mousePos.x - (rect1.getSize().x / 2), mousePos.y - (rect1.getSize().y / 2));
+            }
+            
+        }
+        
+        menuWindow.clear(sf::Color::White);
+        menuWindow.draw(rect1);
+        menuWindow.display();
+        
+    }
+    
+}

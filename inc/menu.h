@@ -72,6 +72,8 @@ public:
     
     int getIntGameSizeChoice();
     int stringToInt(std::string word);
+    
+    void menuLoop();
 };
 
 #endif

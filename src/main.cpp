@@ -11,7 +11,8 @@ std::vector <JigsawPiece> gameSet;
 
 int main()
 {
-    std::string input;
+    /*std::string input;
+
     int intInput = 0, c = 0;
     bool isGoodInput = 0;
     
@@ -37,7 +38,9 @@ int main()
     
     setUpJigsawVector();
     
-    std::cout << std::endl << gameSet.size() << std::endl;
+    std::cout << std::endl << gameSet.size() << std::endl;*/
+    
+    menu.menuLoop();
     
     return 0;
 }
